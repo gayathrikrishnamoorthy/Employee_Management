@@ -35,7 +35,7 @@ function App()
   useEffect(()=>
   {
       fetchemp();
-  },[filter,sort])
+  },[filter,sort,fetchemp])
 
   //add
   const submit= async(e)=>
