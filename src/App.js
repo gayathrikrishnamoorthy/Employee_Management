@@ -1,6 +1,7 @@
 import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
 function App()
 {
   const [data,setdata]=useState([]);
@@ -32,7 +33,6 @@ function App()
   const emp=await axios.get(endpoint);
   setdata(emp.data);
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(()=>
 {
     fetchemp();
