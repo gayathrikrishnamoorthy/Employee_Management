@@ -12,8 +12,8 @@ function App()
   const[filter,setfilter]=useState("");
   const[sort,setsort]=useState("");
   const url="http://localhost:5000";
-  //fetch
-  const fetch = async()=>
+  //fetchemp
+  const fetchemp= async()=>
   {
     let endpoint=`${url}/emp`;
   const query=[];
@@ -34,7 +34,7 @@ function App()
   }
   useEffect(()=>
   {
-      fetch();
+      fetchemp();
   },[filter,sort])
 
   //add
@@ -57,7 +57,7 @@ function App()
     setemail("");
     setsalary("");
     setdept("");
-fetch();
+fetchemp();
   };
 
   //update
@@ -74,7 +74,7 @@ fetch();
   const del = async (id) =>
   {
       await axios.delete(`${url}/emp/${id}`);
-      fetch();
+      fetchemp();
   };
 
   return (
