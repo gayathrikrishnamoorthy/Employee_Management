@@ -32,11 +32,11 @@ function App()
   const emp=await axios.get(endpoint);
   setdata(emp.data);
   }
-  useEffect(()=>
-  {
-      fetchemp();
-  },[filter,sort,fetchemp])
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(()=>
+{
+    fetchemp();
+},[filter,sort])
   //add
   const submit= async(e)=>
   {
